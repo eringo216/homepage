@@ -31,7 +31,7 @@ export default {
                     return res.text();
                 });
 
-                let body = template.replace('${body}', resourceText).replace('${baseURL}', baseURL);
+                let body = template.replace('${body}', resourceText).replace(/\${baseURL}/g, baseURL);
                 const titleRegexp = resourceText.match(/\${title}="(.+?)"/);
                 if (titleRegexp) {
                     body = body.replace('${title}', titleRegexp[1]);
