@@ -11,25 +11,27 @@
 export default {
 	async fetch(request, env, ctx) {
 		const url = new URL(request.url);
+        const baseURL = new URL("https://raw.githubusercontent.com/eringo216/homepage/master/public")
 
         console.log(`Request URL: ${url}`);
         if (!url.pathname.startsWith('/resource')) {
             if(url.pathname == "/"){
                 url.pathname = "/top"
             }
-            const resource = await fetch(new URL(`/resource${url.pathname}`, url.origin));
+            const resource = await fetch(`${baseURL}/resource${url.pathname}/index.html`);
+            console.log("fetching:",`${baseURL}/resource${url.pathname}/index.html`)
             if (resource.ok) {
                 console.log(`Resource find: ${url.pathname}`);
                 if (!resource.headers.get('content-type')?.includes('text/html')) {
-                    return resource;
+                    //return resource;
                 }
 
                 const resourceText = await resource.text();
-                const template = await fetch(new URL(`/template`, url.origin)).then((res) => {
+                const template = await fetch(`${baseURL}/template.html`).then((res) => {
                     return res.text();
                 });
 
-                let body = template.replace('${body}', resourceText);
+                let body = template.replace('${body}', resourceText).replace('${baseURL}', baseURL);
                 const titleRegexp = resourceText.match(/\${title}="(.+?)"/);
                 if (titleRegexp) {
                     body = body.replace('${title}', titleRegexp[1]);
