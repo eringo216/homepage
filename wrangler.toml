@@ -1,0 +1,10 @@
+name = "homepage"
+type = "javascript"
+account_id = "eringo216"
+
+workers_dev = true
+
+# ↓これがないとルートにデプロイされません
+routes = [
+  { pattern = "homepage.eringo216.workers.dev/*", zone_id = "", script = "homepage" }
+]

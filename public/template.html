@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="/style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet" />
+		<title>${title} - eringo216's Homepage</title>
+	</head>
+	<body>
+		<!-- ヘッダー部分 -->
+		<header id="banner">
+			<div id="title">
+				<img src="/images/output.gif" alt="Left Image" class="banner-img left-img" />
+				<a href="top"><img src="/images/title.png" alt="サイトタイトル" class="site-title" style="height: 100%" /></a>
+				<img src="/images/output.gif" alt="Right Image" class="banner-img right-img" />
+			</div>
+		</header>
+		<!-- コンテンツ部分 -->
+		<div id="contents">
+			<div id="sidebar">
+				<div id="inner">
+					<section>
+						<strong>メイン</strong>
+						<ul>
+							<li><a href="/top/">Top</a></li>
+							<li>
+								<a href="/commission/">依頼の金額等<br />参考表</a>
+							</li>
+							<li><a href="/tweet/">つぶやき</a></li>
+							<li><a href="/memo/">メモ</a></li>
+							<li><a href="/info/">情報</a></li>
+						</ul>
+					</section>
+					<hr />
+					<section>
+						<strong>制作物</strong>
+						<ul>
+							<li><a href="/gallery/">ギャラリー</a></li>
+							<li><a href="/live2d/">Live2D展示室</a></li>
+							<li><a href="/others/">その他</a></li>
+							<li style="display: none"><a href="OMOIKAMO">謎</a></li>
+						</ul>
+					</section>
+				</div>
+			</div>
+
+			<!-- メインコンテンツ部分 -->
+			<div id="main">${body}</div>
+		</div>
+        <footer>
+            <p>&copy; 2025 eringo216. All Rights Reserved.</p>
+        </footer>
+	</body>
+</html>

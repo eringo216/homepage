@@ -1,0 +1,132 @@
+<!-- ${title}="謎"-->
+<!DOCTYPE html>
+<head>
+    <title>Eringgrasil</title>
+    <style>
+        body {
+            margin: 0vh;
+            text-align: center;
+            background-color: black;
+            position: relative;
+        }
+
+        .example {
+            position: fixed;
+            display: block;
+            top: 50vh;
+            left: 50vw;
+            margin-top: -50vh;
+            margin-left: -88.88vh;
+        }
+
+        .example img,
+        video {
+            position: absolute;
+            max-height: 100vh;
+            max-width: 178vh;
+        }
+        .example video{
+            height:100vh;
+            width:177.78vh
+        }
+
+        #sky {
+            width: auto;
+            height: 100vh;
+        }
+
+        #clouds {
+            height: 100vh;
+            width: auto;
+            top: 37.04vh;
+        }
+
+        #island {
+            top: 72vh;
+            left: 62.21vh;
+        }
+
+        #ground{
+            width:auto;
+            height: 28.98vh;
+            top: 71.02vh;
+            left: 60.9vh;
+        }
+
+        #leaves1 {
+            width: auto;
+            height: 100vh;
+        }
+
+        #leaves2 {
+            width: auto;
+            height: 69.25vh;
+            left: 17.2vh;
+        }
+        #branch {
+            left: 1.6vh;
+        }
+
+        #leaves3 {
+            width: auto;
+            height: 60.37vh;
+            top: 5.83vh;
+            left: 28.3vh;
+        }
+        #leaves4{
+        }
+    </style>
+    <script>
+        window.addEventListener('load', function () {
+            document.body.addEventListener('mousemove', logPosition);
+        });
+        function logPosition(event) {
+            const x = (event.clientX - window.innerWidth / 2) * 0.01;
+            const y = (event.clientY - window.innerHeight / 2) * 0.01;
+
+            document.getElementById("clouds").style.left = `${0 - x * 0.05}vh`
+            document.getElementById("clouds").style.top = `${37.04 - y * 0.05}vh`
+
+            document.getElementById("island").style.left = `${62.21 - x * 0.2}vh`
+            document.getElementById("island").style.top = `${72 - y * 0.2}vh`
+
+            document.getElementById("ground").style.left = `${60.9 - x * 0.3}vh`
+            document.getElementById("ground").style.top = `${71.02 - y * 0.3}vh`
+
+            document.getElementById("leaves1").style.left = `${0 - x * 0.5}vh`
+            document.getElementById("leaves1").style.top = `${0 - y * 0.5}vh`
+
+            document.getElementById("leaves2").style.left = `${17.2 - x * 0.6}vh`
+            document.getElementById("leaves2").style.top = `${0 - y * 0.6}vh`
+
+            document.getElementById("branch").style.left = `${1.6 - x * 0.7}vh`
+            document.getElementById("branch").style.top = `${0 - y * 0.7}vh`
+
+            document.getElementById("leaves3").style.left = `${28.3 - x * 0.8}vh`
+            document.getElementById("leaves3").style.top = `${5.83 - y * 0.8}vh`
+
+            document.getElementById("leaves4").style.left = `${0 - x}vh`
+            document.getElementById("leaves4").style.top = `${0 - y}vh`
+        }
+    </script>
+</head>
+
+<body>
+    <div class="example">
+        <img src="./parts/sky.jpg" id="sky">
+        <img src="./parts/clouds.png" id="clouds">
+        <img src="./parts/island.png" id="island">
+        <img src="./parts/ground.png" id="ground">
+        <img src="./parts/leaves1.png" id="leaves1">
+        <video muted playsinline autoplay loop>
+            <source src="./parts/leaf2.webm" />
+        </video>
+        <img src="./parts/leaves2.png" id="leaves2">
+        <img src="./parts/branch.png" id="branch">
+        <img src="./parts/leaves3.png" id="leaves3">
+        <img src="./parts/leaves4.png" id="leaves4">
+        <video muted playsinline autoplay loop>
+            <source src="./parts/leaf.webm" />
+        </video>
+    </div>
+</body>

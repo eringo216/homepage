@@ -1,0 +1,253 @@
+ 
+/* 通常のリンク */
+a {
+    color: #c6a6ff; /* 明るい紫色 */
+    text-decoration: none; /* 下線なし */
+    transition: color 0.3s ease; /* ホバー時の色変更に滑らかな移行効果を追加 */
+}
+
+/* ホバー時のリンク */
+a:hover {
+    color: #8BC34A; /* 少し明るい緑色 */
+    text-decoration: underline; /* ホバー時に下線を表示 */
+}
+
+body {
+    min-height: 100vh;
+    height:100vh;
+    background-image: url(./images/senga.png);
+    background-attachment: scroll;
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: white;
+}
+
+/* ぼかしと透明感を強調したナビバー */
+#banner {
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: solid rgba(255, 255, 255, 0.2) 2px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+#main {
+    margin: 20px;
+    width: 100%;
+}
+
+#title {
+    display: flex;
+    height: 60px;
+    width: auto;
+}
+
+/* メインレイアウト */
+#contents {
+    display: flex;
+    min-height: calc(100% - 4rem - 2px);
+    width: 100%;
+}
+
+/* ガラス風のサイドバー */
+#sidebar {
+    min-width: 8rem;
+    max-width: 10rem;
+    padding: 1rem;
+    background: rgba(0, 0, 20, 0.6);
+    color: white;
+    border-right: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+#inner {
+    position: sticky;
+    top: 1rem;
+}
+
+.custom-font {
+    color: darkorchid;
+    font-family: "Stardos Stencil", system-ui;
+    font-weight: 700;
+    font-style: normal;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+}
+.gallery img {
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+.gallery img:hover {
+    transform: scale(1.05);
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.modal.show {
+    display: flex;
+    opacity: 1;
+}
+.modal img {
+    max-width: 90%;
+    max-height: 90%;
+    transition: transform 0.3s ease-in-out;
+}
+.modal.show img {
+    transform: scale(1);
+}
+.modal p {
+    font-size: 30px;
+    color: white;
+    margin-top: 10px;
+}
+table {
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid #ffffff;
+    padding: 10px;
+}
+th {
+    background-color: #161616;
+}
+td {
+    background-color: #070707;
+}
+
+/* メインコンテンツエリア */
+#contents {
+    flex: 1;
+}
+
+#main {
+    display: block;
+    min-width: 60vw;
+    min-height: 33.75vw;
+}
+
+footer p{
+    margin: 0;
+    padding: 5px;
+    background-color: #111111;
+    text-align: center;
+}
+/* 右側スペース */
+#right {
+    width: auto;
+}
+
+ul {
+    padding-left:5px;
+}
+
+/* スタイリッシュなリスト */
+li {
+    margin-top: 10px;
+    font-size: 16px;
+    list-style: none;
+    position: relative;
+    padding-left: 1rem;
+}
+
+li::before {
+    content: "/ ";
+    position: absolute;
+    left: 0;
+    color: rgba(255, 58, 58, 0.8);
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.8);
+}
+
+/* ボタンデザイン（光沢感を追加） */
+.button {
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.8), rgba(0, 100, 255, 0.8));
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 255, 255, 0.3);
+}
+
+.button:hover {
+    background: linear-gradient(135deg, rgba(0, 100, 255, 0.8), rgba(0, 255, 255, 0.8));
+    box-shadow: 0 6px 15px rgba(0, 255, 255, 0.6);
+    transform: scale(1.05);
+}
+
+/* モーダルのスタイル */
+.modal {
+    image-rendering:optimizeQuality;
+    backdrop-filter: blur(5px);
+    flex-wrap: wrap;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* 初期状態では透明 */
+    visibility: hidden; /* 初期状態では非表示 */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* モーダル表示時のスタイル */
+.modal.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal.show img {
+    transform: scale(1);
+}
+
+.modal p {
+    color: white;
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

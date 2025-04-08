@@ -1,0 +1,73 @@
+<!-- ${title}="Gallery"-->
+<h1 class="custom-font">Gallery</h1>
+<div class="gallery">
+    <img src="images/kemono.png" alt="kemono.png" class="gallery-item">
+    <img src="images/urotsuki.png" alt="urostuki.png" class="gallery-item">
+    <img src="images/DOF.png" alt="DOF.png" class="gallery-item">
+    <img src="images/hawk.webp" alt="hawk.webp" class="gallery-item">
+    <img src="images/egg.jpg" alt="egg.jpg" class="gallery-item">
+    <img src="images/rotteen.webp" alt="rotteen.webp" class="gallery-item">
+    <img src="images/aaaa.png" alt="aaaa.png" class="gallery-item">
+    <img src="images/mantion.jpg" alt="mantion.jpg" class="gallery-item">
+    <img src="images/whip.png" alt="whip.png" class="gallery-item">
+    <img src="images/renard.jpg" alt="renard.jpg" class="gallery-item">
+    <img src="images/eye.png" alt="eye.png" class="gallery-item">
+    <img src="images/day.png" alt="day.png" class="gallery-item">
+    <img src="images/goldenhour.png" alt="goldenhour.png" class="gallery-item">
+    <img src="images/kemono.gif" alt="kemono.gif" class="gallery-item">
+    <img src="images/golden_carrot.png" alt="golden_carrot.png" class="gallery-item">
+    <img src="images/bi-dama.jpg" alt="bi-dama.jpg" class="gallery-item">
+    <img src="images/sakuya3d.png" alt="sakuya3d.png" class="gallery-item">
+    <img src="images/axe.png" alt="axe.png" class="gallery-item">
+    <img src="images/emerald.png" alt="emerald.png" class="gallery-item">
+    <img src="images/glass.png" alt="glass.png" class="gallery-item">
+    <img src="images/magik.png" alt="magik.png" class="gallery-item">
+    <img src="images/nanikore.png" alt="nanikore.png" class="gallery-item">
+    <img src="images/volcano.png" alt="volcano.png" class="gallery-item">
+    <img src="images/twitter.png" alt="twitter.png" class="gallery-item">
+    <img src="images/eraser.jpg" alt="eraser.jpg" class="gallery-item">
+</div>
+    
+<div class="modal" id="modal" onclick="closeModal()">
+    <img id="modalImg">
+    <p id="modalCaption"></p>
+</div>
+
+<footer>
+    <p>&copy; 2025 eringo216. All Rights Reserved.</p>
+</footer>
+
+<script>
+    document.querySelectorAll(".gallery-item").forEach(img => {
+        img.addEventListener("click", function() {
+            const imageSrc = this.src;
+            const imageAlt = this.alt;
+
+            if (window.self !== window.top) {
+                // iframe 内 → 親ページにメッセージを送信
+                window.parent.postMessage({
+                    type: "imageClick",
+                    src: imageSrc,
+                    alt: imageAlt
+                }, "*");
+            } else {
+                // 直接開かれている → 自分の modal を表示
+                const modal = document.getElementById("modal");
+                const modalImg = document.getElementById("modalImg");
+                const modalCaption = document.getElementById("modalCaption");
+
+                modalImg.src = imageSrc;
+                modalCaption.textContent = imageAlt;
+                modal.classList.add("show");
+            }
+        });
+    });
+
+    function closeModal() {
+        const modal = document.getElementById("modal");
+        modal.classList.remove("show");
+        setTimeout(() => {
+            modal.classList.remove("show");
+        }, 300);
+    }
+</script>

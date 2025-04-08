@@ -1,0 +1,291 @@
+{
+	"Version": 3,
+	"Parameters": [
+		{
+			"Id": "ParamAngleX",
+			"GroupId": "",
+			"Name": "Angle X"
+		},
+		{
+			"Id": "ParamAngleY",
+			"GroupId": "",
+			"Name": "Angle Y"
+		},
+		{
+			"Id": "ParamAngleZ",
+			"GroupId": "",
+			"Name": "Angle Z"
+		},
+		{
+			"Id": "ParamEyeLOpen",
+			"GroupId": "",
+			"Name": "EyeL Open"
+		},
+		{
+			"Id": "ParamEyeLSmile",
+			"GroupId": "",
+			"Name": "EyeL Smile"
+		},
+		{
+			"Id": "ParamEyeROpen",
+			"GroupId": "",
+			"Name": "EyeR Open"
+		},
+		{
+			"Id": "ParamEyeRSmile",
+			"GroupId": "",
+			"Name": "EyeR Smile"
+		},
+		{
+			"Id": "ParamMatsuyureL",
+			"GroupId": "",
+			"Name": "左まつげ揺れ"
+		},
+		{
+			"Id": "ParamDoukouR",
+			"GroupId": "",
+			"Name": "瞳孔拡大縮小R"
+		},
+		{
+			"Id": "ParamMatsuyureR",
+			"GroupId": "",
+			"Name": "右まつげ揺れ"
+		},
+		{
+			"Id": "ParamDoukouL",
+			"GroupId": "",
+			"Name": "瞳孔拡大縮小L"
+		},
+		{
+			"Id": "ParamEyeBallX",
+			"GroupId": "",
+			"Name": "Eyeball X"
+		},
+		{
+			"Id": "ParamEyeBallY",
+			"GroupId": "",
+			"Name": "Eyeball Y"
+		},
+		{
+			"Id": "ParamBrowLX",
+			"GroupId": "",
+			"Name": "BrowL X"
+		},
+		{
+			"Id": "ParamBrowLY",
+			"GroupId": "",
+			"Name": "BrowL Y"
+		},
+		{
+			"Id": "ParamBrowRX",
+			"GroupId": "",
+			"Name": "BrowR X"
+		},
+		{
+			"Id": "ParamBrowRY",
+			"GroupId": "",
+			"Name": "BrowR Y"
+		},
+		{
+			"Id": "ParamBrowLAngle",
+			"GroupId": "",
+			"Name": "BrowL Angle"
+		},
+		{
+			"Id": "ParamBrowRAngle",
+			"GroupId": "",
+			"Name": "BrowR Angle"
+		},
+		{
+			"Id": "ParamBrowLForm",
+			"GroupId": "",
+			"Name": "BrowL Form"
+		},
+		{
+			"Id": "ParamBrowRForm",
+			"GroupId": "",
+			"Name": "BrowR Form"
+		},
+		{
+			"Id": "ParamMouthForm",
+			"GroupId": "",
+			"Name": "Mouth Form"
+		},
+		{
+			"Id": "ParamMouthOpenY",
+			"GroupId": "",
+			"Name": "Mouth Open"
+		},
+		{
+			"Id": "ParamCheek",
+			"GroupId": "",
+			"Name": "Cheek"
+		},
+		{
+			"Id": "ParamBodyAngleX",
+			"GroupId": "",
+			"Name": "Body X"
+		},
+		{
+			"Id": "ParamBodyAngleY",
+			"GroupId": "",
+			"Name": "Body Y"
+		},
+		{
+			"Id": "ParamBodyAngleZ",
+			"GroupId": "",
+			"Name": "Body Z"
+		},
+		{
+			"Id": "ParamBreath",
+			"GroupId": "",
+			"Name": "Breathing"
+		},
+		{
+			"Id": "ParamHairFront",
+			"GroupId": "",
+			"Name": "Hair Move Front"
+		},
+		{
+			"Id": "ParamHairMoveSub",
+			"GroupId": "",
+			"Name": "髪揺れ前サブ"
+		},
+		{
+			"Id": "ParamHairSide",
+			"GroupId": "",
+			"Name": "Hair Move Side"
+		},
+		{
+			"Id": "ParamHairBack",
+			"GroupId": "",
+			"Name": "Hair Move Back"
+		},
+		{
+			"Id": "ParamMaeg1",
+			"GroupId": "",
+			"Name": "前髪1"
+		}
+	],
+	"ParameterGroups": [],
+	"Parts": [
+		{
+			"Id": "Part",
+			"Name": "眉"
+		},
+		{
+			"Id": "Part2",
+			"Name": "前髪"
+		},
+		{
+			"Id": "Part3",
+			"Name": "前髪影"
+		},
+		{
+			"Id": "Part4",
+			"Name": "横髪"
+		},
+		{
+			"Id": "Part5",
+			"Name": "横髪影"
+		},
+		{
+			"Id": "Part7",
+			"Name": "目"
+		},
+		{
+			"Id": "Part6",
+			"Name": "鼻"
+		},
+		{
+			"Id": "Part12",
+			"Name": "口"
+		},
+		{
+			"Id": "Part13",
+			"Name": "耳"
+		},
+		{
+			"Id": "Part14",
+			"Name": "顔"
+		},
+		{
+			"Id": "Part15",
+			"Name": "首輪"
+		},
+		{
+			"Id": "Part16",
+			"Name": "腕のやつ"
+		},
+		{
+			"Id": "Part17",
+			"Name": "ズボン"
+		},
+		{
+			"Id": "Part18",
+			"Name": "上半身服"
+		},
+		{
+			"Id": "Part21",
+			"Name": "靴"
+		},
+		{
+			"Id": "Part22",
+			"Name": "腕"
+		},
+		{
+			"Id": "Part23",
+			"Name": "体"
+		},
+		{
+			"Id": "Part25",
+			"Name": "衣装裏"
+		},
+		{
+			"Id": "Part26",
+			"Name": "うしろがみ"
+		},
+		{
+			"Id": "Part11",
+			"Name": "涙袋等"
+		},
+		{
+			"Id": "Part29",
+			"Name": "右目"
+		},
+		{
+			"Id": "Part27",
+			"Name": "左目"
+		},
+		{
+			"Id": "Part19",
+			"Name": "フォルダー 9"
+		},
+		{
+			"Id": "Part20",
+			"Name": "フォルダー 2"
+		},
+		{
+			"Id": "Part30",
+			"Name": "右瞳"
+		},
+		{
+			"Id": "Part10",
+			"Name": "左瞳"
+		}
+	],
+	"CombinedParameters": [
+		[
+			"ParamEyeBallX",
+			"ParamEyeBallY"
+		],
+		[
+			"ParamBrowLX",
+			"ParamBrowLY"
+		],
+		[
+			"ParamBrowRX",
+			"ParamBrowRY"
+		]
+	]
+}
