@@ -177,8 +177,8 @@ li::before {
     content: "/ ";
     position: absolute;
     left: 0;
-    color: rgba(255, 58, 58, 0.8);
-    text-shadow: 0 0 5px rgba(255, 0, 0, 0.8);
+    color: #00FFFF;
+    text-shadow: 0 0 5px #00FFFF;
 }
 
 /* ボタンデザイン（光沢感を追加） */
