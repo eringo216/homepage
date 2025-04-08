@@ -11,7 +11,7 @@
 export default {
 	async fetch(request, env, ctx) {
 		const url = new URL(request.url);
-        const baseURL = new URL("https://raw.githubusercontent.com/eringo216/homepage/master/public")
+        const baseURL = new URL("https://raw.githubusercontent.com/eringo216/homepage/master/public") //   /public でおわるようにしてね
 
         console.log(`Request URL: ${url}`);
         if (!url.pathname.startsWith('/resource')) {
