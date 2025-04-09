@@ -67,7 +67,7 @@
             model.destroy();
             model = null;
         }
-        PIXI.live2d.Live2DModel.from("${baseURL}" + `/resource/live2D/${modelname}/${modelname}.model3.json`, { autoInteract: false }).then(newModel => {
+        PIXI.live2d.Live2DModel.from("${baseURL}" + `/resource/live2d/${modelname}/${modelname}.model3.json`, { autoInteract: false }).then(newModel => {
             model = newModel;
             app.stage.addChild(model);
             model.scale.set(scale);
