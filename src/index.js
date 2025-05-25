@@ -50,6 +50,6 @@ export default {
             console.log(resource);
         }
 
-        return new Response("ざんねん!404でしたー もどるボタンおしてね", { status: 404 });
+        return new Response("404 (´・ω・`)<ページがないよ", { status: 404 });
     },
 }
