@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>BlockBypasser</title>
+  <style>
+    html,body {
+      color: #ffffff;
+      background-color: #222222;
+      min-width: 100vw;
+      min-height: 100vh;
+      transition: background-color 0.5s ease, color 0.5s ease;
+      margin: 0px;
+    }
+    .container {
+      min-width: max-content;
+      border-radius: 10px;
+      box-shadow: 0px 2px 5px black;
+      margin: 5px;
+      background: #222222;
+      border: outset 5px #222222;
+    }
+    #settings {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 5px auto;
+      height: fit-content;
+      z-index: 10; /* iframeの上に表示 */
+    }
+    .content {
+      box-sizing: border-box;
+      display: table;
+      width: 100%;
+      padding: 5px;
+      border-radius: 8px;
+      max-height: 0;  /* 初期状態で閉じている */
+      transition: max-height 0.5s ease-out;  /* 伸び縮みのアニメーション */
+    }
+    input {
+      width: 400px;
+      padding: 0.5em;
+    }
+    button {
+      padding: 0.5em 1em;
+      margin-left: 0.5em;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none; /* 枠線を削除 */
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1; /* 設定パネルの下に配置 */
+    }
+    #settings label {
+      display: inline-flex;
+      min-width: 50px; /* ラベルの幅を固定 */
+      margin-right: 10px; /* ラベルと入力フィールドの間隔 */
+    }
+    .options {
+      white-space: nowrap;
+    }
+    .options input,
+    .options button {
+      flex-grow: 1; /* 入力フィールドとボタンを横に広げて揃える */
+      font-size: 14px;
+      border-radius: 5px;
+      padding: 5px;
+    }
+    .sendbtn {
+      align-self: center;
+      height: fit-content;
+      background: #adadad;
+      color: #000000;
+      border: outset 3px #adadad;
+      border-radius: 5px;
+    }
+
+    .sendbtn:active {
+      background: #333;
+      color: #fff;
+      border: inset 3px #ccc;
+    }
+    summary {
+        background-color: #101010;
+    }
+    input[type="text"], input[type="number"] {
+      background-color: black;
+      border: inset 3px #666;
+      color: white;
+    }
+
+    input[type="checkbox"] {
+        background: #101010;
+        border: inset 3px #666;  /* 外向き枠線 */
+    }
+
+    input[type="checkbox"]::before {
+        background: #333;
+        border: 3px outset #666;
+    }
+
+    input[type="checkbox"]:checked {
+        background: crimson;  /* チェック時の背景色 */
+    }
+  </style>
+  <!--<script src="https://unpkg.com/@ungap/custom-elements-builtin"></script>-->
+  <!--<script type="module" src="x-frame-bypass.js"></script>-->
+</head>
+<body>
+  <details id="settings" class="container">
+    <summary>設定</summary>
+    <div class="content">
+      <div class="options">
+        <input type="text" id="urlInput" placeholder="ここにURLを入力">
+        <button button class="sendbtn" onclick="setIframeUrl(document.getElementById('urlInput').value)">開く</button>
+        <button button class="sendbtn" onclick="setIframeUrl('')">閉じる</button>
+      <!--input type="checkbox" id="togglebypass" style="max-width:60px;">開けないとき用(動作超不安定)-->
+    </div>
+  </details>
+
+  <iframe id="previewFrame" is="x-frame-bypass" src="" sandbox="allow-forms allow-scripts allow-same-origin"></iframe>
+
+  <script>
+    const checkbox = document.getElementById('togglebypass');
+    const iframe = document.getElementById('previewFrame');
+    function setIframeUrl(url) {
+      iframe.src = url;
+    }
+    checkbox.addEventListener('change', () => {
+    });
+    
+  </script>
+</body>
+</html>
