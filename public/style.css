@@ -15,8 +15,9 @@ a:hover {
 body {
     min-height: 100vh;
     height:100vh;
-    background-image: url(./images/senga.png);
-    background-attachment: scroll;
+    background-image: url(./images/bg.png);
+    background-attachment: fixed;
+    background-size: contain;
     margin: 0;
     font-family: "Segoe UI", Arial, sans-serif;
     color: white;
