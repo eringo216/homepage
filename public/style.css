@@ -16,8 +16,10 @@ body {
     min-height: 100vh;
     height:100vh;
     background-image: url(./images/bg.png);
+    background-position: 100% top;
     background-attachment: fixed;
-    background-size: cover;
+    background-color: #222222;
+    background-repeat: no-repeat;
     margin: 0;
     font-family: "Segoe UI", Arial, sans-serif;
     color: white;
